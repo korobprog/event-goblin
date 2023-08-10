@@ -1,0 +1,35 @@
+import { Api } from './api';
+
+let a = new Api();
+
+a.apiPars();
+
+let idInterval = null;
+//Start
+idInterval = setInterval(() => cls(cells[rand(cells.length)]), 1000);
+a.table.addEventListener('click', shot);
+
+//Stop
+setTimeout((m) => {
+  if (confirm(`Вы ${m}. Ещё раз?`)) start();
+  dead.innerText = lost.innerText = 0;
+});
+a.table.removeEventListener('click', shot);
+clearInterval(idInterval);
+
+export class StartStop {
+
+  idInterval = idInterval;
+  a = a;
+
+  start() {
+    this.a;
+    this.idInterval;
+  }
+
+  stop(m) {
+    this.setTimeout(m);
+    this.a;
+    this.clearInterval;
+  }
+}

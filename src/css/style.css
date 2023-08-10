@@ -1,16 +1,20 @@
-body {
-    color: #999;
+table {
+  border: 1px solid #ddd;
+  border-spacing: 40px;
 }
 
-.cell {
-    width: 120px;
-    height: 120px;
-    border: 2px solid black;
+td {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
     margin: 5px;
-  }
+    border-radius: 50%;
+}
 
-  .game-field {
-    display:flex;
-    align-items: stretch;
-  justify-content: center;
-  }
+.hole {
+  background-color: #808080;
+  background-image: url(../img/goblin.png); /* здесь свой адрес крота */
+  background-position: center;
+  background-size: contain;
+  cursor: url(../img/hammer.png), pointer;
+}
