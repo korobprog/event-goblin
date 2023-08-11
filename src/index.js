@@ -1,11 +1,11 @@
 import './css/style.css';
-import { Api } from './components/api';
 import { Logic } from './components/logic';
-import { StartStop } from './components/start-stop';
+import { Start } from './components/start.js';
+import { Stop } from './components/stop.js';
 
-Api();
-Logic();
-StartStop()
+new Logic();
+new Stop()
+new Start()
 
 /* const [table, dead, lost] = ['table', 'dead', 'lost'].map(id => document.getElementById(id));
 const cells = table.querySelectorAll('td');

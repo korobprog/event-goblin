@@ -11,7 +11,7 @@ export class Api {
   lost = lost;
   cells = cells;
   audio = audio;
-  
+
   apiPars() {
     this.table;
     this.dead;

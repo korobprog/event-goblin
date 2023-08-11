@@ -1,10 +1,10 @@
-import {Api}  from "./api";
+import { Api } from "./api";
 
 let a = new Api()
-
 a.apiPars()
 
 export class Logic {
+
   rand(n) {
     return Math.floor(Math.random() * n);
   }
