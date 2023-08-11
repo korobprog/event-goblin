@@ -3,9 +3,11 @@ import { Logic } from './components/logic';
 import { Start } from './components/start.js';
 import { Stop } from './components/stop.js';
 
-new Logic();
-new Stop()
-new Start()
+new Logic().rand();
+new Logic().cls();
+new Logic().shot();
+new Stop().stop();
+new Start().start();
 
 /* const [table, dead, lost] = ['table', 'dead', 'lost'].map(id => document.getElementById(id));
 const cells = table.querySelectorAll('td');
