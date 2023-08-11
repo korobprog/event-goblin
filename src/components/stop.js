@@ -1,19 +1,20 @@
 import { Api } from "../components/api"
 import { Start } from "../components/start"
+import { Logic } from "./logic";
 
-let a = new Api();
-let b = new Start()
+let api = new Api();
+let start = new Start()
+let logic = new Logic()
 let idInterval = null;
-
 
 export class Stop {
 
    stop(m) {
       setTimeout(() => {
-         if (confirm(`Вы ${m}. Ещё раз?`)) b.start();
-         dead.innerText = lost.innerText = 0;
+         if (confirm(`Вы ${m}. Ещё раз?`)) start.start();
+         api.dead.innerText = api.lost.innerText = 0;
       });
-      a.table.removeEventListener('click', shot);
+      api.table.removeEventListener('click', logic.shot());
       clearInterval(idInterval);
    }
 }

@@ -1,7 +1,6 @@
 import { Api } from "./api";
 
-let a = new Api()
-a.apiPars()
+let api = new Api()
 
 export class Logic {
 
@@ -10,20 +9,26 @@ export class Logic {
   }
 
   cls(elem) {
-    elem.classList.add('hole');
-    setTimeout(() => elem.classList.remove('hole'), 500);
+    if (elem) {
+      api.cells.classList.add("hole");
+      setTimeout(() => api.cells.classList.remove("hole"), 500);
+    }
+
   }
 
   shot(e) {
-    if (e.target.classList.contains('hole')) {
-      a.dead.innerText = Number(dead.innerText) + 1;
-      audio.play();
-    } else {
-      a.lost.innerText = Number(lost.innerText) + 1;
-      a.audio.play();
+    if (e) {
+      if (api.target.classList.contains('hole')) {
+        api.dead.innerText = Number(api.dead.innerText) + 1;
+        api.audio.play();
+      } else {
+        api.lost.innerText = Number(api.lost.innerText) + 1;
+        api.audio.play();
+      }
     }
 
-    if (Number(dead.innerText) === 10) stop('выиграли');
-    if (Number(lost.innerText) === 10) stop('проиграли');
+
+    if (Number(api.dead.innerText) === 10) stop('выиграли');
+    if (Number(api.lost.innerText) === 10) stop('проиграли');
   }
 }
