@@ -1,7 +1,7 @@
 import { Api } from "./api";
 import { Logic } from "./logic";
 
-export class Start {
+class Start {
 
    private api: Api;
    private logic: Logic;
@@ -24,3 +24,5 @@ export class Start {
    }
 
 }
+
+export { Start };

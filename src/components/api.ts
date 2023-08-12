@@ -6,7 +6,7 @@ interface DOMElements {
   audio: HTMLAudioElement;
 }
 
-export class Api {
+ class Api {
 
   private elements: DOMElements;
   target: any;
@@ -32,3 +32,4 @@ export class Api {
   }
 
 }
+export { Api };
