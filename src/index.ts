@@ -1,13 +1,19 @@
 import './css/style.css';
-import { Logic } from './components/logic';
-import { Start } from './components/start.js';
-import { Stop } from './components/stop.js';
 
-new Logic().rand();
-new Logic().cls();
-new Logic().shot();
-new Stop().stop();
-new Start().start();
+import { Logic } from './components/logic';
+import { Start } from './components/start';
+import { Stop } from './components/stop';
+import { Api } from './components/api';
+
+const api = new Api();
+const logic = new Logic(api);
+const start = new Start(api, logic);  
+const stop = new Stop(api, start, logic);
+
+logic.rand(5); 
+logic.cls(api.cells[0]);
+start.start();
+stop.stop('проиграли');
 
 /* const [table, dead, lost] = ['table', 'dead', 'lost'].map(id => document.getElementById(id));
 const cells = table.querySelectorAll('td');
