@@ -13,13 +13,13 @@ export class Api {
   dead: any;
   audio: any;
   lost: any;
-   table: any;
-   cells: any;
+  table: any;
+  cells: any;
 
   constructor() {
     const ids = ['table', 'dead', 'lost'];
 
-    this.elements = ids.reduce < DOMElements > ((acc, id) => {
+    this.elements = ids.reduce < DOMElements > ((acc: any, id) => {
       acc[id] = document.getElementById(id)!;
       return acc;
     }, {} as DOMElements);

@@ -18,7 +18,7 @@ export class Start {
          this.logic.cls(this.api.cells[this.logic.rand(this.api.cells.length)]);
       }, 1000);
 
-      this.api.table.addEventListener('click', (e) => {
+      this.api.table.addEventListener('click', (e: any) => {
          this.logic.shot(e);
       });
    }

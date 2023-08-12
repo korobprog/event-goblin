@@ -10,10 +10,10 @@ const logic = new Logic(api);
 const start = new Start(api, logic);  
 const stop = new Stop(api, start, logic);
 
-logic.rand(5); 
+/* logic.rand(5); 
 logic.cls(api.cells[0]);
 start.start();
-stop.stop('проиграли');
+stop.stop('проиграли'); */
 
 /* const [table, dead, lost] = ['table', 'dead', 'lost'].map(id => document.getElementById(id));
 const cells = table.querySelectorAll('td');
