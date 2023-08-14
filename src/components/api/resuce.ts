@@ -1,19 +1,34 @@
 import './css/style.css';
 
-import { Logic } from './components/logic';
-import { Start } from './components/start';
-import { Stop } from './components/stop';
-import { Api } from './components/api/api';
+import { Logic } from '../logic';
+import { Start } from '../start';
+import { Stop } from '../stop';
+import { Api } from './api';
 
-const api = new Api();
-const logic = new Logic(api);
-const start = new Start(api, logic);  
-const stop = new Stop(api, start, logic);
+class Reduce {
+   
+  constructor(api: Api, start: Start, logic: Logic) {
+    this.api = api;
+    this.start = start; 
+    this.logic = logic;
+  }
+
+api = new Api();
+logic = new Logic(api);
+start = new Start(api, logic);  
+stop = new Stop(api, start, logic);
+
+
+}
+
 
 logic.rand(5); 
 logic.cls(api.cells[0]);
 start.start();
 stop.stop('проиграли'); 
+
+export { Reduce };
+
 
 /* const [table, dead, lost] = ['table', 'dead', 'lost'].map(id => document.getElementById(id));
 const cells = table.querySelectorAll('td');

@@ -1,4 +1,4 @@
-import { Api } from "./api";
+import { Api } from "./api/api";
 import { Logic } from "./logic";
 
 class Start {
