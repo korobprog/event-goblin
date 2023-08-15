@@ -2,12 +2,24 @@ import './css/style.css';
 import { Logic } from './components/logic';
 import { Start } from './components/start.js';
 import { Stop } from './components/stop.js';
+import { Api } from './components/api';
 
-new Logic().rand();
-new Logic().cls();
-new Logic().shot();
-new Stop().stop();
-new Start().start();
+const api = new Api();
+const stop = new Stop();
+const logic = new Logic();
+const start = new Start();
+
+/* logic.rand(5);
+logic.cls(api.cells[0]);
+start.start();
+stop.stop('проиграли'); */
+
+/* let logicRand = new Logic().rand();
+let logicCls = new Logic().cls();
+let logicShot = new Logic().shot();
+let logicStop = new Stop().stop();
+let logicStart = new Start().start(); */
+
 
 /* const [table, dead, lost] = ['table', 'dead', 'lost'].map(id => document.getElementById(id));
 const cells = table.querySelectorAll('td');

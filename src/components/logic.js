@@ -1,7 +1,8 @@
 import { Api } from "./api";
+import { Stop } from "./stop";
 
-let a = new Api()
-a.apiPars()
+let api = new Api()
+let stop = new Stop()
 
 export class Logic {
 
@@ -16,14 +17,14 @@ export class Logic {
 
   shot(e) {
     if (e.target.classList.contains('hole')) {
-      a.dead.innerText = Number(dead.innerText) + 1;
-      audio.play();
+      api.dead.innerText = Number(api.dead.innerText) + 1;
+      api.audio.play();
     } else {
-      a.lost.innerText = Number(lost.innerText) + 1;
-      a.audio.play();
+      api.lost.innerText = Number(api.lost.innerText) + 1;
+      api.audio.play();
     }
 
-    if (Number(dead.innerText) === 10) stop('выиграли');
-    if (Number(lost.innerText) === 10) stop('проиграли');
+    if (Number(api.dead.innerText) === 10) stop('выиграли');
+    if (Number(api.lost.innerText) === 10) stop('проиграли');
   }
 }

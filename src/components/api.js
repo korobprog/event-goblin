@@ -3,6 +3,7 @@ const [table, dead, lost] = ['table', 'dead', 'lost'].map((id) =>
 const cells = table.querySelectorAll('td');
 const audio = new Audio(
   'https://www.rajastore.ru/wp-content/uploads/2023/08/10691.mp3');
+const idInterval = null;
 
 export class Api {
 
@@ -11,6 +12,7 @@ export class Api {
   lost = lost;
   cells = cells;
   audio = audio;
+  idInterval = idInterval;
 
   apiPars() {
     this.table;
@@ -18,5 +20,6 @@ export class Api {
     this.lost;
     this.cells;
     this.audio;
+    this.idInterval;
   }
 }

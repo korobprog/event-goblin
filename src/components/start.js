@@ -1,11 +1,13 @@
 import { Api } from "./api"
+import { Logic } from "./logic";
 
-let a = new Api();
+let api = new Api();
+let logic = new Logic();
 
 export class Start {
 
    start() {
-      a.idInterval = setInterval(() => cls(cells[rand(cells.length)]), 1000);
-      a.table.addEventListener('click', shot);
+      api.idInterval = setInterval(() => logic.cls(api.cells[logic.rand(api.cells.length)]), 1000);
+      api.table.addEventListener('click', logic.shot);
    }
 }
