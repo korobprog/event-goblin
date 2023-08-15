@@ -1,5 +1,5 @@
-import { Api } from "./api";
-import { Stop } from "./stop";
+import { Api } from "./api.js";
+import { Stop } from "./stop.js";
 
 class Logic {
 

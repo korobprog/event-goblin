@@ -1,6 +1,6 @@
-import { Api } from "../components/api";
-import { Start } from "../components/start";
-import { Logic } from "./logic";
+import { Api } from "./api.js";
+import { Start } from "./start.js";
+import { Logic } from "./logic.js";
 
 class Stop {
    constructor() {
