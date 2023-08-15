@@ -1,10 +1,12 @@
 import { Api } from "./api";
 import { Stop } from "./stop";
 
-let api = new Api()
-let stop = new Stop()
+class Logic {
 
-export class Logic {
+  constructor() {
+    this.api = new Api()
+    this.stop = new Stop()
+  }
 
   rand(n) {
     return Math.floor(Math.random() * n);
@@ -17,14 +19,18 @@ export class Logic {
 
   shot(e) {
     if (e.target.classList.contains('hole')) {
-      api.dead.innerText = Number(api.dead.innerText) + 1;
-      api.audio.play();
+      this.api.dead.innerText = Number(this.api.dead.innerText) + 1;
+      this.api.audio.play();
     } else {
-      api.lost.innerText = Number(api.lost.innerText) + 1;
-      api.audio.play();
+      this.api.lost.innerText = Number(this.api.lost.innerText) + 1;
+      this.api.audio.play();
     }
 
-    if (Number(api.dead.innerText) === 10) stop('выиграли');
-    if (Number(api.lost.innerText) === 10) stop('проиграли');
+    if (Number(this.api.dead.innerText) === 10) this.stop('выиграли');
+    if (Number(this.api.lost.innerText) === 10) this.stop('проиграли');
   }
 }
+
+
+
+export { Logic };

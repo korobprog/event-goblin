@@ -1,25 +1,21 @@
-const [table, dead, lost] = ['table', 'dead', 'lost'].map((id) =>
-  document.getElementById(id));
-const cells = table.querySelectorAll('td');
-const audio = new Audio(
-  'https://www.rajastore.ru/wp-content/uploads/2023/08/10691.mp3');
-const idInterval = null;
+class Api {
+  constructor() {
+    const [table, dead, lost] = ['table', 'dead', 'lost'].map((id) =>
+      document.getElementById(id));
 
-export class Api {
+    this.table = table;
+    this.dead = dead;
+    this.lost = lost;
 
-  table = table;
-  dead = dead;
-  lost = lost;
-  cells = cells;
-  audio = audio;
-  idInterval = idInterval;
+    this.cells = this.table.querySelectorAll('td');
 
-  apiPars() {
-    this.table;
-    this.dead;
-    this.lost;
-    this.cells;
-    this.audio;
-    this.idInterval;
+    this.audio = new Audio(
+      'https://www.rajastore.ru/wp-content/uploads/2023/08/10691.mp3');
+
+    this.idInterval = null;
+
   }
+
 }
+
+export { Api };
